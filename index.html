@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArenaCash — Indique um amigo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f9ff;
+      color: #0b1f3a;
+    }
+
+    .slide {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(42, 118, 255, 0.18), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #eef6ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: #0d6efd;
+      opacity: 0.08;
+      right: -120px;
+      bottom: -140px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 35px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #0d6efd;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #0d6efd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 50px;
+      background: #e4f0ff;
+      color: #0d6efd;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+      color: #09264a;
+    }
+
+    h1 span {
+      color: #0d6efd;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      font-size: 21px;
+      line-height: 1.5;
+      color: #52657d;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 30px;
+      border-radius: 12px;
+      background: #0d6efd;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(13, 110, 253, 0.25);
+    }
+
+    .reward-card {
+      background: white;
+      border-radius: 28px;
+      padding: 45px 35px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(24, 73, 125, 0.12);
+      border: 1px solid #e4edf8;
+    }
+
+    .reward-label {
+      color: #6b7d92;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .reward {
+      font-size: 82px;
+      font-weight: 900;
+      letter-spacing: -4px;
+      color: #0d6efd;
+      margin-bottom: 12px;
+    }
+
+    .reward-description {
+      color: #52657d;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 25px;
+      left: 60px;
+      font-size: 12px;
+      color: #8a9aae;
+    }
+
+    @media (max-width: 800px) {
+      .slide {
+        padding: 40px 25px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      h1 {
+        font-size: 52px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .reward-card {
+        padding: 30px;
+      }
+
+      .reward {
+        font-size: 64px;
+      }
+
+      .footer {
+        left: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="slide">
+
+    <div class="container">
+
+      <section class="content">
+
+        <div class="brand">
+          <div class="brand-icon">A</div>
+          ArenaCash
+        </div>
+
+        <div class="tag">CAMPANHA ESPECIAL</div>
+
+        <h1>
+          Indique um amigo<br>
+          e ganhe <span>R$ 50</span>
+        </h1>
+
+        <p class="subtitle">
+          Convide seus amigos para conhecer a ArenaCash,
+          compartilhe sua experiência e receba uma recompensa
+          por cada indicação válida.
+        </p>
+
+        <a href="#" class="button">
+          Saiba mais
+        </a>
+
+      </section>
+
+      <aside class="reward-card">
+
+        <div class="reward-label">
+          SUA RECOMPENSA
+        </div>
+
+        <div class="reward">
+          R$ 50
+        </div>
+
+        <p class="reward-description">
+          Para cada amigo indicado que cumprir
+          as condições da campanha.
+        </p>
+
+      </aside>
+
+    </div>
+
+    <div class="footer">
+      ArenaCash · Campanha de indicação
+    </div>
+
+  </main>
+
+</body>
+</html>
